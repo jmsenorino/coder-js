@@ -1,8 +1,14 @@
-let number1 = parseFloat(prompt("Ingrese el primer numero"));
-let operation = prompt(
+let number1;
+let operation;
+let number2;
+
+const askForValues = () => {
+  number1 = parseFloat(prompt("Ingrese el primer numero"));
+  operation = prompt(
   "Ingrese la operacion que desea realizar (+, -, /, *, %)"
-);
-let number2 = parseFloat(prompt("Ingrese el segundo numero"));
+  );
+  number2 = parseFloat(prompt("Ingrese el segundo numero"));
+}
 
 const result = () => {
   switch (operation) {
@@ -21,4 +27,11 @@ const result = () => {
   }
 };
 
+askForValues();
 alert(result());
+
+let button = document.getElementById('redo');
+button.onclick = () => {
+  askForValues();
+  alert(result());
+}
