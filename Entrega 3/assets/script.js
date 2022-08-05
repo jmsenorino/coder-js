@@ -115,6 +115,19 @@ equalsButton.addEventListener('click', () => {
 allClearButton.addEventListener('click', () => {
     calculator.clear()
     calculator.updateDisplay()
+    Toastify({
+        text: "All Clear (:",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #2d3a41, #411d42)",
+        }
+    }).showToast();
 })
 
 deleteButton.addEventListener('click', () => {
